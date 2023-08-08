@@ -1,0 +1,9 @@
+{%extends 'posts/base.html'%}
+{%block content%}
+
+    <form method="POST">
+        {%csrf_token%}
+        <h2>Do you really want to delete?</h2>
+        <input type="submit" value="Delete">
+    </form>
+{%endblock%}

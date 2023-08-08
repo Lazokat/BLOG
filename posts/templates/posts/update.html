@@ -1,0 +1,14 @@
+{% extends 'posts/base.html' %}
+
+{% block content %}
+
+   <form method="POST" enctype="multipart/form-data">
+            {%if post.image%}
+            <img src="{{post.image.url}}" width="350" height="300" alt="{{post.id}}">
+            {%endif%}
+
+  {% csrf_token %}
+  {{form.as_p}}
+    <input type="submit" value="Update">  
+</form>
+{% endblock %}
